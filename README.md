@@ -1,2 +1,2 @@
-# studio-design-landing-page
-Sudio Design Landing Page
+# Sudio Design Landing Page
+![Landing page preview](./page.png)
