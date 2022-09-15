@@ -104,10 +104,12 @@ p {
 			z-index: -3;
 		}
 
-		h1:before {
-			@include rectangle($warning-light, left, top);
-			left: -36px;
-			top: -18px;
+		@include breakpoint(xl) {
+			h1:before {
+				@include rectangle($warning-light, left, top);
+				left: -36px;
+				top: -18px;
+			}
 		}
 	}
 
@@ -159,16 +161,18 @@ p {
 	&__wrapper {
 		position: relative;
 
-		&:before {
-			background: $primary;
-			border-radius: 75px;
-			content: '';
-			display: block;
-			height: 100%;
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 496px;
+		@include breakpoint(xl) {
+			&:before {
+				background: $primary;
+				border-radius: 75px;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 496px;
+			}
 		}
 	}
 }

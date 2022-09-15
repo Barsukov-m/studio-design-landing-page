@@ -2,7 +2,13 @@
 
 .home-nav {
 	.navbar-nav {
-		margin: 50px 0 46px;
+		@include breakpoint(lg) {
+			margin: 40px 0 35px;
+		}
+
+		@include breakpoint(xxl) {
+			margin: 50px 0 46px;
+		}
 	}
 
 	.navbar-brand {
@@ -10,7 +16,17 @@
 	}
 
 	.nav-item {
-		margin-left: 60px;
+		margin: .5rem 0;
+		font-size: 1.1rem;
+
+		@include breakpoint(lg) {
+			margin: 0 0 0 40px;
+			font-size: 1rem;
+		}
+
+		@include breakpoint(xxl) {
+			margin-left: 60px;
+		}
 	}
 
 	.nav-link {
@@ -151,8 +167,16 @@
 	&__wrapper {
 		background: $primary-light;
 		border-radius: 75px;
-		height: 292px;
-		padding: 105px 100px 105px 90px;
+		padding: 70px;
+
+		@include breakpoint(md) {
+			padding: 80px;
+		}
+
+		@include breakpoint(xl) {
+			height: 292px;
+			padding: 105px 100px 105px 90px;
+		}
 	}
 
 	&__form {
@@ -160,18 +184,30 @@
 		border-radius: 60px;
 		border: 1px solid #f1f1f1;
 		height: 80px;
+		min-width: 400px;
 		padding: 9px 13px;
-		position: absolute;
 		right: 100px;
-		width: 480px;
 		z-index: 1;
+
+		@include breakpoint(lg) {
+			width: 600px;
+		}
+
+		@include breakpoint(xl) {
+			position: absolute;
+			width: 480px;
+		}
 
 		input {
 			background: none;
 			border-radius: 60px;
 			border: none;
 			color: $body;
-			padding: 0 20px;
+			padding: 0 10px;
+
+			@include breakpoint(lg) {
+				padding: 0 20px;
+			}
 
 			&:active,
 			&:focus {

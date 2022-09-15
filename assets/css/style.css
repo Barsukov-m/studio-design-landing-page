@@ -25,8 +25,13 @@ a:hover {
 }
 
 .container {
-  width: 1200px;
+  width: 90%;
   padding: 0;
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 section h1 {
@@ -34,10 +39,26 @@ section h1 {
 }
 
 .hero {
-  margin-bottom: 138px;
+  margin-bottom: 170px;
+}
+@media only screen and (min-width: 992px) {
+  .hero {
+    margin-bottom: 138px;
+  }
 }
 .hero__headline {
   max-width: 470px;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .hero__headline {
+    margin-top: 80px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero__headline {
+    margin-top: 0;
+  }
 }
 .hero__headline h1 {
   margin-bottom: 34px;
@@ -46,20 +67,53 @@ section h1 {
   margin-bottom: 33px;
 }
 .hero__hero-img {
+  display: none;
   margin-right: -10%;
+}
+@media only screen and (min-width: 992px) {
+  .hero__hero-img {
+    display: block;
+    width: 60%;
+    margin-left: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hero__hero-img {
+    width: initial;
+  }
 }
 .hero__hero-img img {
   border-radius: 0 0 0 200px;
 }
 
 .clients {
-  margin-bottom: 40px;
+  margin-bottom: 170px;
+}
+@media only screen and (min-width: 1200px) {
+  .clients {
+    margin-bottom: 40px;
+  }
 }
 .clients__heading {
   max-width: 336px;
 }
+.clients__clients {
+  overflow: auto;
+}
+@media only screen and (min-width: 992px) {
+  .clients__clients {
+    overflow: initial;
+    flex-wrap: wrap;
+  }
+}
 .clients__clients img {
-  margin-left: 3.4rem;
+  margin: 2rem;
+}
+@media only screen and (min-width: 992px) {
+  .clients__clients img {
+    margin: 0 0 0 3.4rem;
+    margin-left: 3.4rem;
+  }
 }
 .clients p {
   font-size: 18px;
@@ -103,6 +157,9 @@ section h1 {
 .goals__heading {
   max-width: 532px;
 }
+.goals .video img {
+  width: 100%;
+}
 
 .feedback {
   margin-bottom: 148px;
@@ -112,18 +169,47 @@ section h1 {
 }
 .feedback__wrapper {
   margin-top: 106px;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 992px) {
+  .feedback__wrapper {
+    align-items: initial;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .feedback__wrapper {
+    justify-content: space-between;
+  }
 }
 .feedback__client-photo {
   margin-right: 25px;
 }
 .feedback__client-photo img {
   border-radius: 500px 0 500px 500px;
+  width: 200px;
+}
+@media only screen and (min-width: 768px) {
+  .feedback__client-photo img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .feedback__client-photo img {
+    width: auto;
+  }
 }
 .feedback__clients {
+  display: none;
   width: 348px;
   height: 355px;
   margin-right: -51px;
   position: relative;
+}
+@media only screen and (min-width: 1400px) {
+  .feedback__clients {
+    display: block;
+  }
 }
 .feedback__clients img {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2509803922);
@@ -190,7 +276,12 @@ section h1 {
   font-size: 14px;
 }
 .footer__social {
-  margin-top: 2.5rem;
+  margin: 2.5rem 0 2rem;
+}
+@media only screen and (min-width: 992px) {
+  .footer__social {
+    margin-bottom: 0;
+  }
 }
 .footer__nav {
   width: 60%;
@@ -202,19 +293,41 @@ section h1 {
   font-size: 14px;
   line-height: 1.9;
 }
+.footer__nav-col {
+  margin-bottom: 1rem;
+}
 .footer__copy {
   font-size: 14px;
 }
 
 /* ====== Navigation ====== */
-.home-nav .navbar-nav {
-  margin: 50px 0 46px;
+@media only screen and (min-width: 992px) {
+  .home-nav .navbar-nav {
+    margin: 40px 0 35px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .home-nav .navbar-nav {
+    margin: 50px 0 46px;
+  }
 }
 .home-nav .navbar-brand {
   font-size: 1.7em;
 }
 .home-nav .nav-item {
-  margin-left: 60px;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 992px) {
+  .home-nav .nav-item {
+    margin: 0 0 0 40px;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .home-nav .nav-item {
+    margin-left: 60px;
+  }
 }
 .home-nav .nav-link {
   color: #000000;
@@ -333,26 +446,51 @@ section h1 {
 .newsletter__wrapper {
   background: #f4f9ff;
   border-radius: 75px;
-  height: 292px;
-  padding: 105px 100px 105px 90px;
+  padding: 70px;
+}
+@media only screen and (min-width: 768px) {
+  .newsletter__wrapper {
+    padding: 80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .newsletter__wrapper {
+    height: 292px;
+    padding: 105px 100px 105px 90px;
+  }
 }
 .newsletter__form {
   background: #ffffff;
   border-radius: 60px;
   border: 1px solid #f1f1f1;
   height: 80px;
+  min-width: 400px;
   padding: 9px 13px;
-  position: absolute;
   right: 100px;
-  width: 480px;
   z-index: 1;
+}
+@media only screen and (min-width: 992px) {
+  .newsletter__form {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .newsletter__form {
+    position: absolute;
+    width: 480px;
+  }
 }
 .newsletter__form input {
   background: none;
   border-radius: 60px;
   border: none;
   color: #565656;
-  padding: 0 20px;
+  padding: 0 10px;
+}
+@media only screen and (min-width: 992px) {
+  .newsletter__form input {
+    padding: 0 20px;
+  }
 }
 .newsletter__form input:active, .newsletter__form input:focus {
   border: none;
@@ -496,17 +634,19 @@ p {
   left: 214px;
   z-index: -3;
 }
-.benefits__heading h1:before {
-  content: "";
-  display: block;
-  height: 178px;
-  position: absolute;
-  width: 178px;
-  background: #fff5db;
-  z-index: -1;
-  border-radius: 100px 0 0 0;
-  left: -36px;
-  top: -18px;
+@media only screen and (min-width: 1200px) {
+  .benefits__heading h1:before {
+    content: "";
+    display: block;
+    height: 178px;
+    position: absolute;
+    width: 178px;
+    background: #fff5db;
+    z-index: -1;
+    border-radius: 100px 0 0 0;
+    left: -36px;
+    top: -18px;
+  }
 }
 .benefits__cards {
   position: relative;
@@ -579,16 +719,18 @@ p {
 .newsletter__wrapper {
   position: relative;
 }
-.newsletter__wrapper:before {
-  background: #2639ed;
-  border-radius: 75px;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 496px;
+@media only screen and (min-width: 1200px) {
+  .newsletter__wrapper:before {
+    background: #2639ed;
+    border-radius: 75px;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 496px;
+  }
 }
 
 .feedback__client-photo {
